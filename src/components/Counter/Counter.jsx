@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, decrement, incrementByValue } from './../../redux/features/counter/counterSlice'; // import all actions from counterSlice
+import { useState } from 'react';
 
 const Counter = () => {
     /**
@@ -9,9 +10,19 @@ const Counter = () => {
 
     const { count } = useSelector((state) => state.counter);
     const dispatch = useDispatch();
+
+    const [input, setInput] = useState(null);
     return (
         <div>
-            <button onClick={() => dispatch(incrementByValue(3))}>Increment by 3</button>
+            {/* <input type="number" name="incrementValue" id="" /> */}
+            <button onClick={() => dispatch(incrementByValue(input))}>Increment by</button>
+            <input
+                className='mx-10 w-96'
+                type="number"
+                value={input}
+                onInput={e => setInput(parseFloat(e.target.value))}
+                placeholder='Enter Dynamic Value to increment'
+            />
             <br />
             <button onClick={() => dispatch(increment())}>Increment</button>
             <div>
