@@ -11,7 +11,7 @@ const Counter = () => {
         <div>
             <button>Increment</button>
             <div>
-                <h1>0</h1>
+                <h1>{count}</h1>
             </div>
             <button>Decrement</button>
         </div>
