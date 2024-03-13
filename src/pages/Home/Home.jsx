@@ -1,3 +1,4 @@
+import Cart from '../../components/Cart/Cart'
 import Counter from '../../components/Counter/Counter'
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
         <div>
             Home
             <Counter />
+            <Cart />
         </div>
     )
 }
