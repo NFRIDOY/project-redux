@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { add, reduce } from "../../redux/features/adderSlice/adderSlice"
+import { add, reduce } from "../../redux/features/adder/adderSlice"
 
 export default function Adder() {
     const { value } = useSelector((state) => state.adder);

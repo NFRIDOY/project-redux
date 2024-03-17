@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from "./features/counter/counterSlice";
 import cartReducer from "./features/cart/cartSlice";
-import adderReducer from "./features/adderSlice/adderSlice";
+import adderReducer from "./features/adder/adderSlice";
 
 /**
  * configureStore is a function
